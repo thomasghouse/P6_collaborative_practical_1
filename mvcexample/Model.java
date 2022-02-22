@@ -1,17 +1,14 @@
 package mvcexample;
-
-// A database with two counter components
-
-import java.util.*;  // For Observable
+import java.util.*;  
 
 public class Model extends Observable {
 
     private int dataBaseA = 0;     // A two component database
     private int dataBaseB = 0;
   
-    public Model() { }             // Constructor doesn't do anything
+    public Model() { }             
   
-    public void modifyA() {        // Mutator method for A component
+    public void modifyA() {        //mutator method for A component
         
         dataBaseA++;
         setChanged();
@@ -25,10 +22,17 @@ public class Model extends Observable {
         
     } // getDataA
  
+    public void modifyB() {        // Mutator method for A component
+        
+        dataBaseB++;
+        setChanged();
+        notifyObservers();         // Note: notifies ALL Observing views
+        
+    }
+    
     public int getDataB() {
         
         return dataBaseB;
         
     } // getDataB
-  
-} // class Model
+}
