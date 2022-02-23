@@ -64,7 +64,7 @@ public class Controller2 extends JFrame
         }
         else if(e.getSource() == incB)
         {
-            modifyB();
+            model.modifyB();
         }
 //        if (e.getSource() == refreshViews) {
 //            view3.update();
