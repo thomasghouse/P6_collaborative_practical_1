@@ -24,14 +24,15 @@ public class Controller1 extends JFrame
     private JButton quit;        // As it says
     
     // Constructor
-    public Controller1(Model model) {
+    // Modified constructor to include parameter for name, and x & y parameters to set frame location on screen.
+    public Controller1(Model model, String name, int x, int y) {
         
         // Record reference to the model
         this.model = model;
         
         // Configure the window
-        setTitle("Controller1");
-        setLocation(40,40);
+        setTitle(name);
+        setLocation(x,y);
         setSize(350,150);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         Container window = getContentPane();
